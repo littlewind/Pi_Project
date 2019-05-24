@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout android:layout_height="match_parent"
+    android:background="@drawable/background_theme"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="240dp"
+        android:fontFamily="@font/sf_ui_display_medium"
+        android:text="@string/meet_raspberry_pi"
+        android:textColor="#07aad3"
+        android:textSize="17sp" />
+
+    <GridView
+        android:layout_marginTop="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="290dp"
+        android:id="@+id/persons"
+        android:numColumns="3"
+        />
+    <ImageView
+        android:background="@drawable/background_straight_line"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/persons"
+        android:layout_marginTop="2dp"
+        android:layout_centerHorizontal="true"/>
+    <TextView
+        android:fontFamily="@font/sf_ui_display_medium"
+        android:layout_below="@+id/persons"
+        android:layout_marginTop="60dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:textSize="14dp"
+        android:layout_marginLeft="10dp"
+        android:text="All changes have been saved."/>
+    <Button
+        android:id="@+id/addNewPerson"
+        android:layout_width="175dp"
+        android:layout_height="50dp"
+        android:fontFamily="@font/sf_ui_display_medium"
+        android:text="@string/add_new_person"
+        android:layout_below="@+id/persons"
+        android:textColor="#ffffff"
+        android:layout_marginLeft="207dp"
+        android:layout_marginTop="46dp"
+        android:background="@drawable/background_button_connect"/>
+    <Button
+        android:id="@+id/done"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sf_ui_display_medium"
+        android:layout_below="@+id/addNewPerson"
+        android:textColor="#ffffff"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/background_button_done"
+        android:text="done"/>
+</RelativeLayout>

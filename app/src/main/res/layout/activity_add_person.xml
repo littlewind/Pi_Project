@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_theme"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageButton
+        android:id="@+id/back"
+        android:src="@drawable/back3"
+        android:layout_margin="12dp"
+        android:layout_width="25dp"
+        android:layout_height="21dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="240dp"
+        android:fontFamily="@font/sf_ui_display_medium"
+        android:text="@string/meet_raspberry_pi"
+        android:textColor="#07aad3"
+        android:textSize="17dp" />
+    <TextView
+        android:id="@+id/enterName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#cecece"
+        android:layout_marginTop="60dp"
+        android:layout_marginLeft="40dp"
+        android:textSize="17dp"
+        android:fontFamily="@font/sf_ui_display_medium"
+        android:text="Enter your first name:"
+        />
+    <EditText
+        android:id="@+id/editName"
+        android:inputType="text"
+        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890"
+        android:paddingLeft="15dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter text..."
+        android:textStyle="italic"
+        android:textColor="#8e8e8e"
+        android:layout_below="@+id/enterName"
+        android:textSize="17dp"
+        android:layout_marginLeft="40dp"
+        android:background="@drawable/background_edittext_name"
+        android:layout_marginTop="15dp"
+        />
+        <Button
+            android:id="@+id/continueAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editName"
+            android:background="@drawable/background_button_continue_disable"
+            android:text="CONTINUE"
+            android:fontFamily="@font/sf_ui_display_medium"
+            android:layout_marginTop="30dp"
+            android:textColor="#71a0b3"
+            android:enabled="false"
+            android:layout_marginLeft="230dp"/>
+</RelativeLayout>

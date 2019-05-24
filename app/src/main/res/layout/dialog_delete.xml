@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="340dp"
+    android:layout_height="130dp"
+    android:layout_centerHorizontal="true"
+    android:background="@drawable/background_theme_dialog">
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/sf_ui_display_medium"
+        android:textColor="#ffffff"
+        android:id="@+id/text"
+        android:textSize="17dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Are you sure want to delete this person?"/>
+
+    <Button
+        android:fontFamily="@font/sf_ui_display_medium"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/text"
+        android:layout_marginLeft="45dp"
+        android:textAllCaps="false"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:text="Cancel"
+        android:background="@drawable/background_button_dialog"
+        android:textColor="#ffffff"
+        android:id="@+id/cancel"/>
+    <Button
+        android:fontFamily="@font/sf_ui_display_medium"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:textAllCaps="false"
+        android:text="Delete"
+        android:layout_below="@+id/text"
+        android:textColor="#ffffff"
+        android:background="@drawable/background_button_dialog"
+        android:layout_marginLeft="70dp"
+        android:id="@+id/delete"
+        android:layout_toRightOf="@+id/cancel"/>
+
+</RelativeLayout>

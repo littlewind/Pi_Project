@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_theme">
+
+    <ImageView
+        android:layout_centerHorizontal="true"
+        android:id="@+id/raspberry_pi"
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        android:layout_marginTop="25dp"
+        android:src="@drawable/raspberry_pi2" />
+
+    <LinearLayout
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="60dp"
+        android:orientation="vertical"
+        android:layout_below="@+id/raspberry_pi"
+        android:background="@drawable/background_button_menu"
+        android:id="@+id/add_person"
+        android:layout_width="160dp"
+        android:layout_height="150dp" >
+
+        <ImageView
+            android:layout_marginTop="7dp"
+            android:src="@drawable/add_person"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/add_person_image"
+            android:layout_width="110dp"
+            android:layout_height="110dp" />
+        <TextView
+            android:layout_marginTop="7dp"
+            android:fontFamily="@font/sf_ui_display_medium"
+            android:layout_gravity="center_horizontal"
+            android:text="Meet People"
+            android:id="@+id/add_person_text"
+            android:textColor="#ffffff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="60dp"
+        android:orientation="vertical"
+        android:id="@+id/control"
+        android:background="@drawable/background_button_menu"
+        android:layout_toRightOf="@+id/add_person"
+        android:layout_below="@+id/raspberry_pi"
+        android:layout_width="160dp"
+        android:layout_height="150dp" >
+        <ImageView
+            android:layout_marginTop="7dp"
+            android:src="@drawable/control"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/control_image"
+            android:layout_width="110dp"
+            android:layout_height="110dp" />
+        <TextView
+            android:fontFamily="@font/sf_ui_display_medium"
+            android:layout_marginTop="7dp"
+            android:layout_gravity="center_horizontal"
+            android:text="Remote"
+            android:id="@+id/control_text"
+            android:textColor="#ffffff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="37dp"
+        android:orientation="vertical"
+        android:layout_below="@+id/add_person"
+        android:background="@drawable/background_button_menu"
+        android:id="@+id/play"
+        android:layout_width="160dp"
+        android:layout_height="150dp" >
+
+        <ImageView
+            android:layout_marginTop="7dp"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/play_image"
+            android:src="@drawable/play2"
+            android:layout_width="110dp"
+            android:layout_height="110dp" />
+        <TextView
+            android:fontFamily="@font/sf_ui_display_medium"
+            android:layout_marginTop="7dp"
+            android:layout_gravity="center_horizontal"
+            android:text="Play"
+            android:id="@+id/play_text"
+            android:textColor="#ffffff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <!--<Button-->
+        <!--android:layout_marginTop="17dp"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_below="@+id/play"-->
+        <!--android:background="@drawable/background_button_menu"-->
+        <!--android:textAllCaps="false"-->
+        <!--android:textColor="#ffffff"-->
+        <!--android:text="Raspberry Pi Q-A"-->
+        <!--android:fontFamily="@font/sf_ui_display_medium"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content" />-->
+
+</RelativeLayout>

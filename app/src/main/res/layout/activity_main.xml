@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:background="@drawable/background_theme"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageView
+        android:id="@+id/raspberry_pi_yellow"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:src="@drawable/raspberry_pi1"
+        android:layout_marginTop="80px"/>
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="300dp"
+        android:max="50"
+        android:progress="0"
+        android:id="@+id/process_bar"
+        android:progressDrawable="@drawable/background_process"
+        android:layout_centerHorizontal="true"
+        android:layout_height="10dp"
+        android:layout_marginTop="330dp" />
+
+    <EditText
+        android:id="@+id/editIP"
+        android:inputType="text"
+        android:clickable="true"
+        android:focusableInTouchMode="true"
+        android:digits="1234567890."
+        android:paddingLeft="15dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_width="270dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
+        android:hint="Input IP..."
+        android:text="192.168.1.151"
+        android:textStyle="italic"
+        android:layout_marginTop="60dp"
+        android:textColor="#8e8e8e"
+        android:layout_below="@+id/process_bar"
+        android:textSize="17dp"
+        android:background="@drawable/background_edittext_name"
+         />
+    <Button
+        android:id="@+id/connect"
+        android:enabled="false"
+        android:background="@drawable/background_button_continue_disable"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/editIP"
+        android:layout_centerHorizontal="true"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        android:fontFamily="@font/sf_ui_display_medium"
+        android:textSize="18sp"
+        android:textColor="#71a0b3"
+        android:text="connect"/>
+
+</RelativeLayout>

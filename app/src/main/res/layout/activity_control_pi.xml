@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/background_theme"
+    android:layout_height="match_parent"
+    tools:context=".ControlPi">
+
+    <WebView
+        android:layout_centerHorizontal="true"
+        android:id="@+id/showFace"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        />
+
+
+    <TextView
+        android:id="@+id/tvPiStatus"
+        android:textSize="14dp"
+        android:layout_below="@+id/showFace"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:textColor="#ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:background="@drawable/background_straight_line"
+        android:layout_width="350dp"
+        android:layout_height="20dp"
+        android:layout_below="@+id/tvPiStatus"
+        android:layout_marginTop="8dp"
+        android:id="@+id/line"
+
+        android:layout_centerHorizontal="true"/>
+
+    <RelativeLayout
+        android:layout_marginTop="8dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line">
+        <Button
+            android:rotation="180"
+            android:layout_below="@+id/up"
+            android:id="@+id/left"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/right1"
+            android:layout_width="70dp"
+            android:layout_height="70dp" />
+        <Button
+            android:layout_below="@+id/up"
+            android:id="@+id/right"
+            android:background="@drawable/right1"
+            android:layout_toRightOf="@+id/left"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="5dp"
+            android:layout_width="70dp"
+            android:layout_height="70dp" />
+        <Button
+            android:rotation="270"
+            android:layout_marginTop="10dp"
+            android:id="@+id/up"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/right1"
+            android:layout_width="70dp"
+            android:layout_height="70dp" />
+        <Button
+            android:rotation="90"
+            android:layout_below="@+id/left"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/right1"
+            android:id="@+id/down"
+            android:layout_marginTop="5dp"
+            android:layout_width="70dp"
+            android:layout_height="70dp" />
+    </RelativeLayout>
+</RelativeLayout>
