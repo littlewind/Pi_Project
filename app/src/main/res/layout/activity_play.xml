@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/background_theme"
+    android:layout_height="match_parent"
+    tools:context=".play">
+
+    <TextView
+        android:id="@+id/exitText"
+        android:textColor="#ffffff"
+        android:text="Are you sure you want to exit?"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="90dp"
+        android:textSize="22sp"
+        android:fontFamily="@font/sf_ui_display_medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/yesButton"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/exitText"
+        android:layout_marginLeft="80dp"
+        android:fontFamily="@font/sf_ui_display_medium"
+        android:textColor="#ffff"
+        android:background="@drawable/background_button_dialog"
+        android:text="Yes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/noButton"
+        android:layout_toRightOf="@+id/yesButton"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="70dp"
+        android:layout_below="@+id/exitText"
+        android:fontFamily="@font/sf_ui_display_medium"
+        android:textColor="#ffff"
+        android:background="@drawable/background_button_dialog"
+        android:text="No"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

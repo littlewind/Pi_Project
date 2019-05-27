@@ -8,20 +8,27 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import java.util.ArrayList;
 
+//Tạo một database lưu thông tin
+//1.id   2.Tên   3.Image
 public class DatabasePerson extends SQLiteOpenHelper {
 
+    //Tên của database
     static final String DB_NAME ="person.db";
     public DatabasePerson( Context context)
     {
         super(context, DB_NAME, null, 1);
     }
 
+    //Hàm truyền vào câu lệnh thực hiện truy vấn vào database
     public void QueryData(String sql)
     {
+        //truy cập vào database với mục đích ghi
         SQLiteDatabase database = getWritableDatabase();
+        //thực hiện truy vấn vào database
         database.execSQL(sql);
     }
 
+    //Hàm ghi đè phương thức tạo bảng trong database
     @Override
     public void onCreate(SQLiteDatabase db) {
 //        String queryCreateTable ="create table Person(id integer primary key autoincrement, name text, image int);";
@@ -33,6 +40,7 @@ public class DatabasePerson extends SQLiteOpenHelper {
 
     }
 
+    //Thêm dữ liệu vào database
     public void insertPerson(String newName,int newImage)
     {
         SQLiteDatabase db = getWritableDatabase();

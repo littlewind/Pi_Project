@@ -17,7 +17,6 @@ import android.widget.Toast;
 
 public class Add_Person extends AppCompatActivity {
 
-    ImageButton back;
     EditText editName;
     Button buttonContinue;
     @Override
@@ -26,16 +25,8 @@ public class Add_Person extends AppCompatActivity {
         setContentView(R.layout.activity_add_person);
 
         editName =(EditText)findViewById(R.id.editName);
-        back =(ImageButton) findViewById(R.id.back);
         buttonContinue=(Button)findViewById(R.id.continueAdd);
 
-        back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent back =new Intent(Add_Person.this, Persons_List.class);
-                startActivity(back);
-            }
-        });
 
         editName.addTextChangedListener(new TextWatcher() {
             @Override
@@ -67,6 +58,7 @@ public class Add_Person extends AppCompatActivity {
                 editName.setText("");
                 InputMethodManager inputMethodManager =(InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
                 inputMethodManager.hideSoftInputFromWindow(v.getWindowToken(), 0);
+
                 Intent intent =new Intent(getBaseContext(),Persons_List.class);
                 intent.putExtra("name",name);
                 startActivity(intent);

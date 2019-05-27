@@ -1,6 +1,7 @@
 package com.example.android_project;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.AsyncTask;
@@ -72,6 +73,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 connect.setEnabled(false);
+                InputMethodManager inputMethodManager =(InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+                inputMethodManager.hideSoftInputFromWindow(v.getWindowToken(), 0);
                 String ip= editIP.getText().toString();
                 PiProperties.IP = ip;
                 //get IP of the Pi
@@ -92,14 +95,15 @@ public class MainActivity extends AppCompatActivity {
                     public void onFinish() {
                         progressBar.setProgress(0);
                         //kiem tra xem co du lieu gui ve
-//                        if (returnMessage == null)
-                        if (returnMessage != null && returnMessage.equals("_ready")) {
-                            Intent intent = new Intent(MainActivity.this, Menu.class);
-                            startActivity(intent);
-                        } else {
-                            connect.setEnabled(true);
-                            Toast.makeText(MainActivity.this, "Cannot connect to Pi", Toast.LENGTH_SHORT).show();
-                        }
+                        Intent intent = new Intent(MainActivity.this, Menu.class);
+                        startActivity(intent);
+//                        if (returnMessage != null && returnMessage.equals("_ready")) {
+//                            Intent intent = new Intent(MainActivity.this, Menu.class);
+//                            startActivity(intent);
+//                        } else {
+//                            connect.setEnabled(true);
+//                            Toast.makeText(MainActivity.this, "Cannot connect to Pi", Toast.LENGTH_SHORT).show();
+//                        }
                     }
                 };
                 countDownTimer.start();

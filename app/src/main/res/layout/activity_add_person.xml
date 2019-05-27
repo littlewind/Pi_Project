@@ -4,13 +4,6 @@
     android:background="@drawable/background_theme"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <ImageButton
-        android:id="@+id/back"
-        android:src="@drawable/back3"
-        android:layout_margin="12dp"
-        android:layout_width="25dp"
-        android:layout_height="21dp"
-        />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -20,13 +13,15 @@
         android:fontFamily="@font/sf_ui_display_medium"
         android:text="@string/meet_raspberry_pi"
         android:textColor="#07aad3"
+        android:id="@+id/meetRaspberryPi"
         android:textSize="17dp" />
     <TextView
+        android:layout_below="@+id/meetRaspberryPi"
         android:id="@+id/enterName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="#cecece"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="30dp"
         android:layout_marginLeft="40dp"
         android:textSize="17dp"
         android:fontFamily="@font/sf_ui_display_medium"
@@ -50,16 +45,16 @@
         android:background="@drawable/background_edittext_name"
         android:layout_marginTop="15dp"
         />
-        <Button
-            android:id="@+id/continueAdd"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/editName"
-            android:background="@drawable/background_button_continue_disable"
-            android:text="CONTINUE"
-            android:fontFamily="@font/sf_ui_display_medium"
-            android:layout_marginTop="30dp"
-            android:textColor="#71a0b3"
-            android:enabled="false"
-            android:layout_marginLeft="230dp"/>
+    <Button
+        android:id="@+id/continueAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editName"
+        android:background="@drawable/background_button_continue_disable"
+        android:text="CONTINUE"
+        android:fontFamily="@font/sf_ui_display_medium"
+        android:layout_marginTop="30dp"
+        android:textColor="#71a0b3"
+        android:enabled="false"
+        android:layout_marginLeft="215dp"/>
 </RelativeLayout>

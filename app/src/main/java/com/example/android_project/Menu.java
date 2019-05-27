@@ -10,9 +10,10 @@ import android.widget.LinearLayout;
 
 public class Menu extends AppCompatActivity {
 
-    LinearLayout face_Recognition;
+    LinearLayout play;
     LinearLayout add_Person;
     LinearLayout remoteControl;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +22,7 @@ public class Menu extends AppCompatActivity {
       //  getSupportActionBar().hide();
         add_Person=(LinearLayout) findViewById(R.id.add_person);
         remoteControl= (LinearLayout) findViewById(R.id.control);
+        play=(LinearLayout)findViewById(R.id.play);
 
         add_Person.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -34,6 +36,14 @@ public class Menu extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getBaseContext(),ControlPi.class);
+                startActivity(intent);
+            }
+        });
+
+        play.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getBaseContext(),play.class);
                 startActivity(intent);
             }
         });
